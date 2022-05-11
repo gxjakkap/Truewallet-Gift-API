@@ -1,31 +1,32 @@
-﻿# Manybaht-Truewallet-API
+﻿# [truewalletgiftredeemer](https://yarn.pm/truewalletgiftredeemer)
 
-API เติมเงินอั่งเปา - Nodejs
+Forked from [manybaht/Manybaht-Truewallet-API](https://github.com/manybaht/Manybaht-Truewallet-API).
 
-อัปเดตล่าสุด (15/3/2022)
-+ แก้ไขโดน Block ส่งขอ Request ไม่ได้
+## Installation
+```bash
+$ yarn add truewalletgiftredeemer
+```
 
-## วิธีติดตั้ง
+or
 
 ```bash
-git clone https://github.com/manybaht/Manybaht-Truewallet-API.git
-npm i
+$ npm i truewalletgiftredeemer
 ```
 
 ## วิธีใช้งาน
 
 ```javascript
-var truewallet = require('./apis/truewallet');
+import twg from 'truewalletgiftredeemer'
 
 //ตัวอย่าง
-truewallet.redeemvouchers('0901234567', 'โค้ด/ลิงก์')
+twg.redeemvouchers('phone_number', 'giftvoucher/link')
 .then(res => {
     console.log(res);
 });
 
 /*
-ตัวอย่างการตอบกลับ
-{ status: 'SUCCESS', amount: จำนวนเงินที่ได้รับ }
-{ status: 'FAIL/ERROR', reason: เหตุผลที่ไม่สำเร็จ }
+Response
+{ status: 'SUCCESS', amount: recieved amount }
+{ status: 'FAIL/ERROR', reason: why it failed }
 */
 ```

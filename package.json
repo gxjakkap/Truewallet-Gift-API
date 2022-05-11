@@ -1,5 +1,25 @@
 {
+  "name": "truewalletgiftredeemer",
+  "version": "0.1.0",
+  "main": "dist/twg.js",
+  "types": "dist/twg.d.ts",
+  "files": [
+    "dist/*.js",
+    "dist/**/*.js",
+    "dist/*.ts",
+    "dist/**/*.ts"
+  ],
+  "repository": "https://github.com/gxjakkap/Truewallet-Gift-API.git",
+  "homepage": "https://github.com/gxjakkap/Truewallet-Gift-API#readme",
+  "author": "Jakkaphat Chalermphanaphan <gunt@guntxjakka.me>",
+  "license": "MIT",
+  "scripts":{
+    "build": "tsc"
+  },
   "dependencies": {
-    "axios": "^0.26.1"
+    "axios": "^0.27.2"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.4"
   }
 }
